@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-form {
+  width: 400px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 10px solid #f8f8f8;
+  width: 120%;
+  position: relative;
+  top: 5px;
+  border-radius: 5px;
+  font-size: 40px;
+  z-index: 2;
+  box-shadow: 0 0 10px #00000039, inset 0 0 2px #00000039;
+}
+
+.suggestions {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.suggestions li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 5px 0 8px #00000019, -5px 0 8px #00000019;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.002);
+  background: linear-gradient(to bottom, #f3f3f3 0%, #fafafa 20%, #fff 100%);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px) scale(1.002);
+  background: linear-gradient(to bottom, #f6f6f6 0%, #f0f0f0 70%, #eee 100%);
+}
+
+.suggestions li:first-child {
+  background: linear-gradient(to bottom, #c9c9c9 0%, #f0f0f0 20%, #eee 100%);
+}
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background: #ffc600;
+}
