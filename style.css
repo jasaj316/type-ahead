@@ -11,25 +11,34 @@ html {
   box-sizing: inherit;
 }
 
-input {
-  width: 100%;
-  padding: 20px;
-}
-
-.search-form {
-  width: 400px;
-  margin: 80px auto;
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.search-form {
+  width: 60vmin;
+  margin-top: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 720px) {
+  .search-form {
+    width: 78vmin;
+    margin-top: 1vmin;
+  }
+}
+
 input.search {
+  width: 120%;
   margin: 0;
   text-align: center;
   outline: 0;
+  padding: 20px;
   border: 10px solid #f8f8f8;
-  width: 120%;
   position: relative;
   top: 5px;
   border-radius: 5px;
@@ -63,12 +72,12 @@ input.search {
 }
 
 .suggestions li:nth-child(even) {
-  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.002);
+  transform: perspective(100px) rotateX(2deg);
   background: linear-gradient(to bottom, #f3f3f3 0%, #fafafa 20%, #fff 100%);
 }
 
 .suggestions li:nth-child(odd) {
-  transform: perspective(100px) rotateX(-3deg) translateY(3px) scale(1.002);
+  transform: perspective(100px) rotateX(-2deg) translateY(1px);
   background: linear-gradient(to bottom, #f6f6f6 0%, #f0f0f0 70%, #eee 100%);
 }
 
