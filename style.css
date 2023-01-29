@@ -18,7 +18,7 @@ body {
 }
 
 .search-form {
-  width: 60vmin;
+  width: 50vmin;
   margin-top: 5vmin;
   display: flex;
   flex-direction: column;
